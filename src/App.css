@@ -225,10 +225,125 @@
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
+/* Markdown styling */
+.message-text p {
+  margin: 0.5em 0;
+}
+
+.message-text p:first-child {
+  margin-top: 0;
+}
+
+.message-text p:last-child {
+  margin-bottom: 0;
+}
+
+.message-text ul,
+.message-text ol {
+  margin: 0.5em 0;
+  padding-left: 1.5em;
+}
+
+.message-text li {
+  margin: 0.25em 0;
+}
+
+.message-text h1,
+.message-text h2,
+.message-text h3,
+.message-text h4,
+.message-text h5,
+.message-text h6 {
+  margin: 1em 0 0.5em 0;
+  font-weight: 600;
+}
+
+.message-text h1:first-child,
+.message-text h2:first-child,
+.message-text h3:first-child {
+  margin-top: 0;
+}
+
+.message-text code {
+  background: rgba(0, 0, 0, 0.05);
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  font-family: "Consolas", "Monaco", "Courier New", monospace;
+  font-size: 0.9em;
+}
+
+.message-text pre {
+  margin: 0.75em 0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.message-text pre code {
+  background: none;
+  padding: 0;
+  border-radius: 0;
+  font-size: 0.85em;
+}
+
+.message-text blockquote {
+  border-left: 3px solid #667eea;
+  margin: 0.5em 0;
+  padding-left: 1em;
+  color: #666;
+}
+
+.message-text a {
+  color: #667eea;
+  text-decoration: underline;
+}
+
+.message-text a:hover {
+  color: #764ba2;
+}
+
+.message-text table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 0.75em 0;
+}
+
+.message-text th,
+.message-text td {
+  border: 1px solid #e5e7eb;
+  padding: 0.5em;
+  text-align: left;
+}
+
+.message-text th {
+  background: #f7f7f8;
+  font-weight: 600;
+}
+
+.message-text hr {
+  border: none;
+  border-top: 1px solid #e5e7eb;
+  margin: 1em 0;
+}
+
 .message.user .message-text {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
   border-bottom-right-radius: 4px;
+}
+
+.message.user .message-text code {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.message.user .message-text a {
+  color: white;
+  text-decoration: underline;
+}
+
+.message.user .message-text blockquote {
+  border-left-color: white;
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .message.assistant .message-text {
@@ -359,6 +474,36 @@
   .message-text {
     background: #3a3a3a;
     color: #e5e5e5;
+  }
+
+  .message-text code {
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  .message-text blockquote {
+    border-left-color: #8b9aff;
+    color: #a0a0a0;
+  }
+
+  .message-text a {
+    color: #8b9aff;
+  }
+
+  .message-text a:hover {
+    color: #a0afff;
+  }
+
+  .message-text th {
+    background: #2d2d2d;
+  }
+
+  .message-text th,
+  .message-text td {
+    border-color: #4a4a4a;
+  }
+
+  .message-text hr {
+    border-top-color: #4a4a4a;
   }
 
   .message.assistant .message-text {
